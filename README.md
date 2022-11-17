@@ -1,2 +1,1 @@
-# Interactive Multiplication Table
-# COMP4610-HW4
+# Interactive Multiplication Table w/ jQuery
