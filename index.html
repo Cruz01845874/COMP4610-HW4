@@ -14,11 +14,19 @@ updated by Roberto Cruz on 10/30/22
     <link href="css/style.css" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="/ico/favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script type="text/javascript" src="script/script.js"></script>
+
+    <script src="script/jquery-validation-1.19.5/lib/jquery-1.11.1.js"></script>
+    <script src="script/jquery-validation-1.19.5/lib/jquery.js"></script>
+    <script src="script/jquery-validation-1.19.5/dist/jquery.validate.js"></script>
+    <script src="script/jquery-validation-1.19.5/dist/additional-methods.js"></script>
+
+    <script src="script/form-validation.js"></script>
 </head>
 <body>
     <h1>Interactive Multiplication Table</h1>
-    <!--Fieldset surrounds input form with border and places header on top.
-    Each input has a placeholder of 0 to show an empty field means a value of 0.-->
+    <!--Fieldset surrounds input form with border and places header on top.-->
     <fieldset>
         <legend>All numbers must be between -50 and 50 inclusive.</legend>
         <form id="mult">
@@ -26,7 +34,7 @@ updated by Roberto Cruz on 10/30/22
                 Starting Row Number
             </label><br>
             <input type="text" id="row_begin" name="row_begin" placeholder="0"><br>
-    
+
             <label for="row_end">
                 Ending Row Number
             </label><br>
@@ -41,22 +49,15 @@ updated by Roberto Cruz on 10/30/22
                 Ending Column Number
             </label><br>
             <input type="text" id="col_end" name="col_end" placeholder="0"><br>
+
+            <!--Button does not create table directly. See JS file-->
+        <input type="button" id="submitButton" value="Create Table" onclick="createTable()">
         </form>
-
-        <!--Button does not create table directly. See JS file-->
-        <input type="submit" value="Create Table" onclick="createTable()">
-
-        <div id="error">
-            <!--Error message appears and deletes when fixed-->
-        </div>
 
     </fieldset>
     <div id="multTab">
         <!--Creates table when button clicked-->
     </div>
-
-    <script type="text/javascript" src="script/script.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.js"></script>
     
 </body>
 </html>

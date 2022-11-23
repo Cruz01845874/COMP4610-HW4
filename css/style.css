@@ -47,12 +47,14 @@ input[type=text] {
     min-width: 50%;
     padding: 12px 20px;
     margin: 8px 0;
+    position: sticky;
 
     background-color: rgb(109, 109, 109);
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     color: white;
     font-size: 24px;
     text-align: center;
+    position: sticky;
     
     box-shadow: none;
     border: 0;
@@ -68,7 +70,7 @@ input[type=text]::placeholder {
 }
 
 /* Create Table Button */
-input[type=submit] {
+input[type=button] {
     background-color: #008bc2;
     
     padding: 14px 20px;
@@ -124,5 +126,9 @@ input[type=submit]:hover {
     background-color: #0036ac;
 }
 
-/* Perfect squares code in JS file */
+.error {
+    text-align: center;
+    display: block;
+}
 
+/* Perfect squares code in JS file */

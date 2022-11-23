@@ -18,8 +18,9 @@ function createTable(row_begin, row_end, col_begin, col_end) {
 
     // Checks arguments first before creating the table.
     // If false, returns without drawing a table.
-    if (checkArgs(row_begin, row_end, col_begin, col_end)) {
+    // if (checkArgs(row_begin, row_end, col_begin, col_end)) {
 
+    if (true) {
         // row header
         for (i = row_begin; i <= row_end; i++) {
             output += "<th>" + i + "</th>";
@@ -54,40 +55,40 @@ function createTable(row_begin, row_end, col_begin, col_end) {
 // 3. If the numbers exceed the allowed values ([-50, 50])
 // 4. If the starting values for the rows or columns are greater than its end values
 // On returning true, the table is created.
-function checkArgs(r1, r2, c1, c2) {
-    var message = "<p>";
-    var values = [r1, r2, c1, c2];
-    var i;
+// function checkArgs(r1, r2, c1, c2) {
+//     var message = "<p>";
+//     var values = [r1, r2, c1, c2];
+//     var i;
 
-    // string checker: isFinite() will return true if a number, false if a string
-    for (i = 0; i < values.length; i++) {
-        if (!isFinite(values[i])) {
-            message += "Please only enter numbers."
-            document.getElementById("error").innerHTML = message + "</p>";
-            return false;
-        } 
+//     // string checker: isFinite() will return true if a number, false if a string
+//     for (i = 0; i < values.length; i++) {
+//         if (!isFinite(values[i])) {
+//             message += "Please only enter numbers."
+//             document.getElementById("error").innerHTML = message + "</p>";
+//             return false;
+//         } 
 
-        // integer checker: returns false if not an integer
-        else if (!Number.isInteger(values[i])) {
-            message += "Please only enter integer numbers.";
-            document.getElementById("error").innerHTML = message + "</p>";
-            return false;
-        }
-    }
+//         // integer checker: returns false if not an integer
+//         else if (!Number.isInteger(values[i])) {
+//             message += "Please only enter integer numbers.";
+//             document.getElementById("error").innerHTML = message + "</p>";
+//             return false;
+//         }
+//     }
 
-    if (r1 < -50 || r2 > 50 || c1 < -50 || c2 > 50) {
-        message += "Please enter a number between -50 and 50."
-        document.getElementById("error").innerHTML = message + "</p>";
-        return false;
-    }
+//     if (r1 < -50 || r2 > 50 || c1 < -50 || c2 > 50) {
+//         message += "Please enter a number between -50 and 50."
+//         document.getElementById("error").innerHTML = message + "</p>";
+//         return false;
+//     }
 
-    // cannot create a reverse table
-    if (r1 > r2 || c1 > c2) {
-        message += "A starting number can't be greater than the ending number.";
-        document.getElementById("error").innerHTML = message + "</p>";
-        return false;
-    }
+//     // cannot create a reverse table
+//     if (r1 > r2 || c1 > c2) {
+//         message += "A starting number can't be greater than the ending number.";
+//         document.getElementById("error").innerHTML = message + "</p>";
+//         return false;
+//     }
 
-    document.getElementById("error").innerHTML = "";
-    return true;
-}
+//     document.getElementById("error").innerHTML = "";
+//     return true;
+// }
