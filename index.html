@@ -15,14 +15,17 @@ updated by Roberto Cruz on 10/30/22
     <link rel="icon" type="image/x-icon" href="/ico/favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <script type="text/javascript" src="script/script.js"></script>
-
     <script src="script/jquery-validation-1.19.5/lib/jquery-1.11.1.js"></script>
     <script src="script/jquery-validation-1.19.5/lib/jquery.js"></script>
     <script src="script/jquery-validation-1.19.5/dist/jquery.validate.js"></script>
     <script src="script/jquery-validation-1.19.5/dist/additional-methods.js"></script>
 
+    <link href="css/jquery-ui.css" rel="stylesheet">
+    <script src="script/jquery-ui-1.13.2/jquery-ui.js"></script>
+
+    <script type="text/javascript" src="script/script.js"></script>
     <script src="script/form-validation.js"></script>
+
 </head>
 <body>
     <h1>Interactive Multiplication Table</h1>
@@ -34,21 +37,25 @@ updated by Roberto Cruz on 10/30/22
                 Starting Row Number
             </label><br>
             <input type="text" id="row_begin" name="row_begin" placeholder="0"><br>
+            <div id="r1_slider"></div><br>
 
             <label for="row_end">
                 Ending Row Number
             </label><br>
             <input type="text" id="row_end" name="row_end" placeholder="0"><br>
+            <div id="r2_slider"></div><br>
     
             <label for="col_begin">
                 Starting Column Number
             </label><br>
             <input type="text" id="col_begin" name="col_begin" placeholder="0"><br>
+            <div id="c1_slider"></div><br>
     
             <label for="col_end">
                 Ending Column Number
             </label><br>
             <input type="text" id="col_end" name="col_end" placeholder="0"><br>
+            <div id="c2_slider"></div><br>
 
             <!--Button does not create table directly. See JS file-->
         <input type="button" id="submitButton" value="Create Table" onclick="createTable()">
@@ -58,6 +65,18 @@ updated by Roberto Cruz on 10/30/22
     <div id="multTab">
         <!--Creates table when button clicked-->
     </div>
+
+    <div id="tabs">
+        <ul>
+            <li><a href="#fragment-1"><span>Example</span></a></li>
+          </ul>
+          <div id="fragment-1">
+            <p>First tab is active by default:</p>
+            <pre><code>$( "#tabs" ).tabs(); </code></pre>
+          </div>
+    </div>
+
+    <script src="script/form-ui.js"></script>
     
 </body>
 </html>

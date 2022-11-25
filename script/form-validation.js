@@ -1,33 +1,28 @@
 $().ready(function() {
     $('#mult').validate({
-        onkeyup: false,
 
         rules: {
             row_begin: {
-                required: true,
                 integer: true,
-                range: [-51, 51],
+                range: [-50, 50],
                 lessThan: '#row_end',
             },
             
             row_end: {
-                required: true,
                 integer: true,
-                range: [-51, 51],
+                range: [-50, 50],
                 greaterThan: '#row_begin'
             },
 
             col_begin: {
-                required: true,
                 integer: true,
-                range: [-51, 51],
+                range: [-50, 50],
                 lessThan: '#col_end'
             },
 
             col_end: {
-                required: true,
                 integer: true,
-                range: [-51, 51],
+                range: [-50, 50],
                 greaterThan: '#col_begin'
             },
         },
@@ -58,8 +53,12 @@ $().ready(function() {
                 required: "Please enter a number.",
                 integer: "Please only enter whole numbers.",
                 range: "Numbers can only be between -50 and 50, inclusive.",
-                lessThan: "The ending column number must be greaer than the start."
+                greaterThan: "The ending column number must be greater than the start."
             }
         }
     })
+
+    $('#submitButton').on('click', function () {
+        $('#mult').valid();
+    });
 })
