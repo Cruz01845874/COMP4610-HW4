@@ -67,8 +67,20 @@ $('#col_end').change(function () {
 var tabs = $('#tabs').tabs();
 
 $('#submitButton').on('click', function () {
-        var ul = tabs.find('ul');
-        $('<li><a href="#fragment-1"><span>Table '+ count +'</span></a></li>');
-        count++;
-    
+    $('#mult').each(function() {
+        if (!($(this).hasClass('valid'))) {
+            return;
+        }
+    });
+
+    var ul = tabs.find('ul');
+    var frags = tabs.find('#frags');
+
+    $('<li><a href="#fragment-' + count + '"><span>Table '+ count +'</span></a></li>').appendTo(ul);
+    count++;
+
+    $('<div id=\"fragment-' + count + '\">' + $('#multTab').html() + '</div>').appendTo(frags);
+
+    tabs.tabs('refresh');
 });
+

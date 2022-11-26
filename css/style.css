@@ -92,15 +92,15 @@ input[type=submit]:hover {
 
 /* Entire table, max width, height, scrolling enabled when overflow */
 #multTab {
-    max-width: 700px;
-    max-height: 700px;
+    max-width: 550px;
+    max-height: 550px;
     float: left;
     margin: 20px auto auto 20px;
     overflow: auto;
 }
 
 /* Center the content within the cells */
-#multTab table, td, th {
+#multTab table, td, th, #tabs, #fragment-ex th {
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 1.15em;
     
@@ -108,20 +108,21 @@ input[type=submit]:hover {
     padding: 10px;
     text-align: center;
     background-color: #0000001e;
+    color:white;
 }
 
 /* Row and column header highlighted */
 
-#multTab table {
+#multTab table, #tabs {
     border: 2px solid white;
     border-radius: 4px;
 }
 
-#multTab th {
+#multTab th, #tabs th, #fragment-ex th {
     background-color: #008bc2;
 }
 
-#multTab th.x {
+#multTab th.x, #tabs th.x, #fragment-ex th.x {
     background-color: #0036ac;
 }
 
@@ -133,6 +134,11 @@ input[type=submit]:hover {
 
 input.error {
     border: 2px solid red;
+}
+
+#tabs {
+    background-color: rgb(58, 58, 58);
+    color:white;
 }
 
 /* Perfect squares code in JS file */

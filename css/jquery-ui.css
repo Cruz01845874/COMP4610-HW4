@@ -833,6 +833,8 @@ button.ui-button::-moz-focus-inner {
 .ui-tabs {
 	margin-top: 1.2em;
 	margin-left: 1.2em;
+	max-width: 550px;
+    max-height: 550px;
 	display: inline-block;
 	position: absolute;
 	overflow: auto;
@@ -843,6 +845,7 @@ button.ui-button::-moz-focus-inner {
 	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 	margin: 0;
 	padding: .2em .2em 0;
+	background: #0000001e;
 }
 .ui-tabs .ui-tabs-nav li {
 	list-style: none;
@@ -875,7 +878,7 @@ button.ui-button::-moz-focus-inner {
 	display: inline-block;
 	border-width: 0;
 	padding: 1em 1.4em;
-	background: none;
+	background: #0000001e;
 }
 .ui-tooltip {
 	padding: 8px;
