@@ -120,6 +120,9 @@ input[type=submit]:hover {
 
 #multTab th, #tabs th, #fragment-ex th {
     background-color: #008bc2;
+    position: sticky;
+    top: 0;
+    left: 0;
 }
 
 #multTab th.x, #tabs th.x, #fragment-ex th.x {

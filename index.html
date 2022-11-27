@@ -36,29 +36,30 @@ updated by Roberto Cruz on 10/30/22
             <label for="row_begin">
                 Starting Row Number
             </label><br>
-            <input type="text" id="row_begin" name="row_begin" placeholder="0"><br>
+            <input class="numInput" type="text" id="row_begin" name="row_begin" placeholder="0"><br>
             <div id="r1_slider"></div><br>
 
             <label for="row_end">
                 Ending Row Number
             </label><br>
-            <input type="text" id="row_end" name="row_end" placeholder="0"><br>
+            <input class="numInput" type="text" id="row_end" name="row_end" placeholder="0"><br>
             <div id="r2_slider"></div><br>
     
             <label for="col_begin">
                 Starting Column Number
             </label><br>
-            <input type="text" id="col_begin" name="col_begin" placeholder="0"><br>
+            <input class="numInput" type="text" id="col_begin" name="col_begin" placeholder="0"><br>
             <div id="c1_slider"></div><br>
     
             <label for="col_end">
                 Ending Column Number
             </label><br>
-            <input type="text" id="col_end" name="col_end" placeholder="0"><br>
+            <input class="numInput" type="text" id="col_end" name="col_end" placeholder="0"><br>
             <div id="c2_slider"></div><br>
 
             <!--Button does not create table directly. See JS file-->
-        <input type="button" id="submitButton" value="Create Table" onclick="createTable()">
+        <input style="display: none;" type="button" id="submitButton" value="Create Table" onclick="createTable()">
+        <input type="button" id="saveButton" value="Create Table">
         </form>
 
     </fieldset>
@@ -75,7 +76,9 @@ updated by Roberto Cruz on 10/30/22
                 <table><tbody><tr><th class="x">×</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th></tr><tr><th>1</th><td style="background-color: #0036ac;"><span>1</span></td><td>2</td><td>3</td><td>4</td><td>5</td></tr><tr><th>2</th><td>2</td><td style="background-color: #0036ac;"><span>4</span></td><td>6</td><td>8</td><td>10</td></tr><tr><th>3</th><td>3</td><td>6</td><td style="background-color: #0036ac;"><span>9</span></td><td>12</td><td>15</td></tr><tr><th>4</th><td>4</td><td>8</td><td>12</td><td style="background-color: #0036ac;"><span>16</span></td><td>20</td></tr><tr><th>5</th><td>5</td><td>10</td><td>15</td><td>20</td><td style="background-color: #0036ac;"><span>25</span></td></tr></tbody></table>
             </div>
         </div>
-        
+        <input type="button" class="tabButton" id="select" value="Select">
+        <input type="button" class="tabButton" id="selectAll" value="Select All">
+        <input type="button" class="tabButton" id="delete" value="Delete">
     </div>
 
     <script src="script/form-ui.js"></script>

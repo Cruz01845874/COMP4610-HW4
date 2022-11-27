@@ -5,7 +5,7 @@ $().ready(function() {
             row_begin: {
                 integer: true,
                 range: [-50, 50],
-                lessThan: '#row_end',
+                lessThan: '#row_end'
             },
             
             row_end: {
