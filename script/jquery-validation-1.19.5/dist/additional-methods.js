@@ -702,7 +702,7 @@ $.validator.addMethod( "greaterThan", function( value, element, param ) {
         } );
     }
 
-    return value > target.val();
+    return parseInt(value) > parseInt(target.val());
 }, "Please enter a greater value." );
 
 $.validator.addMethod( "greaterThanEqual", function( value, element, param ) {
@@ -875,7 +875,7 @@ $.validator.addMethod( "lessThan", function( value, element, param ) {
         } );
     }
 
-    return value < target.val();
+    return parseInt(value) < parseInt(target.val());
 }, "Please enter a lesser value." );
 
 $.validator.addMethod( "lessThanEqual", function( value, element, param ) {
