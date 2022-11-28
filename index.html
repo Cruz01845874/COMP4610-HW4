@@ -12,6 +12,7 @@ updated by Roberto Cruz on 10/30/22
     <title>Interactive Multiplication Table</title>
     <meta charset="utf-8">
     <link href="css/style.css" rel="stylesheet">
+    <link type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/themes/smoothness/jquery-ui.css" rel="stylesheet" />
     <link rel="icon" type="image/x-icon" href="/ico/favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -70,16 +71,17 @@ updated by Roberto Cruz on 10/30/22
     <div id="tabs">
         <p id="tablesMsg"></p>
         <ul>
-            <li><a href="#fragment-ex"><span>Example</span></a></li>
+            <li>
+                <a href="#fragment-ex" class="exampleTab">Example</a>
+            </li>
         </ul>
         <div id="frags">
             <div id="fragment-ex">
                 <table><tbody><tr><th class="x">×</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th></tr><tr><th>1</th><td style="background-color: #0036ac;"><span>1</span></td><td>2</td><td>3</td><td>4</td><td>5</td></tr><tr><th>2</th><td>2</td><td style="background-color: #0036ac;"><span>4</span></td><td>6</td><td>8</td><td>10</td></tr><tr><th>3</th><td>3</td><td>6</td><td style="background-color: #0036ac;"><span>9</span></td><td>12</td><td>15</td></tr><tr><th>4</th><td>4</td><td>8</td><td>12</td><td style="background-color: #0036ac;"><span>16</span></td><td>20</td></tr><tr><th>5</th><td>5</td><td>10</td><td>15</td><td>20</td><td style="background-color: #0036ac;"><span>25</span></td></tr></tbody></table>
             </div>
         </div>
-        
+        <input class="tabs-buttons" type="button" id="deleteButton" value="Delete">
     </div>
-
     <script src="script/form-ui.js"></script>
     
 </body>

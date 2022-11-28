@@ -4,6 +4,7 @@ var maxTables = 31;
 function saveTable() {
     var ul = tabs.find('ul');
     var newTable = $('#multTab').html();
+    var tableName = "[" + $('#row_begin').val() + "," + $('#row_end').val()+ "] x [" + $('#col_begin').val() + "," + $("#col_end").val() + "]";
 
     if (count > maxTables) {
         let message = "You can only save up to 30 tables.";
@@ -15,7 +16,7 @@ function saveTable() {
         return;
     }
 
-    $('<li><a href="#fragment-' + count + '"><span>Table '+ (count-1) +'</span></a></li>').appendTo(ul);
+    $('<li><a href="#fragment-' + count + '"><span>'+ tableName +'</span></a></li>').appendTo(ul);
     $('#frags').append('<div id="fragment-' + count + '">' + newTable + '</div>');
 
     count++;
@@ -117,6 +118,12 @@ $('#tabs').tabs({
     }
 });
 
+tabs.delegate("span.ui-icon-close", "click", function() {
+    var panelId = $(this).closest("li").remove().attr("aria-controls");
+    $("#" + panelId).remove();
+    tabs.tabs("refresh");
+});
+
 $('#saveButton').on('click', function () {
     if (!($('#mult').valid())) {
         return;
@@ -124,3 +131,11 @@ $('#saveButton').on('click', function () {
     saveTable();
     console.log("table created");
 });
+
+// && !($('a').is(".exampleTab"))
+$('#deleteButton').on('click', function() {
+    console.log('delete button clicked');
+    if ($('li').is(".ui-state-active")) {
+        $(".ui-state-active").remove();
+    }
+})
