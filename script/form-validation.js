@@ -59,7 +59,7 @@ $().ready(function() {
         }
     })
 
-    $('#submitButton').on('click', function () {
+    $('#saveButton').on('click', function () {
         $('#mult').valid();
     });
 })

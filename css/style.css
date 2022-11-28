@@ -147,6 +147,10 @@ input.error {
     color:white;
 }
 
+#tablesMsg {
+    display: none;
+}
+
 /* Perfect squares code in JS file */
 
 

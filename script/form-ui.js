@@ -1,13 +1,24 @@
-var count = 1;
+var count = 2;
+var maxTables = 31;
 
 function saveTable() {
     var ul = tabs.find('ul');
+    var newTable = $('#multTab').html();
 
-    $('<li><a href="#fragment-' + count + '"><span>Table '+ count +'</span></a></li>').appendTo(ul);
+    if (count > maxTables) {
+        let message = "You can only save up to 30 tables.";
+        $('#tablesMsg').append(message);
+        $('#tablesMsg').css({
+            "display" : "inline",
+            "line-height" : "1.5em"
+        });
+        return;
+    }
+
+    $('<li><a href="#fragment-' + count + '"><span>Table '+ (count-1) +'</span></a></li>').appendTo(ul);
+    $('#frags').append('<div id="fragment-' + count + '">' + newTable + '</div>');
+
     count++;
-
-    // frags.append('<div id=\"fragment-' + count + '\">' + $('#multTab').html() + '</div>');
-    $('#frags').append('<div id="fragment-' + count + '">' + $('#multTab').html() + '</div>');
 
     tabs.tabs('refresh');
 }
@@ -107,11 +118,9 @@ $('#tabs').tabs({
 });
 
 $('#saveButton').on('click', function () {
-    $('#mult').each(function() {
-        if (!($(this).hasClass('valid'))) {
-            return;
-        }
-    });
+    if (!($('#mult').valid())) {
+        return;
+    }
     saveTable();
     console.log("table created");
 });

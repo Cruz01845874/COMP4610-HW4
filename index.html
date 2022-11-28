@@ -58,7 +58,8 @@ updated by Roberto Cruz on 10/30/22
             <div id="c2_slider"></div><br>
 
             <!--Button does not create table directly. See JS file-->
-        <input type="button" id="submitButton" value="Create Table" onclick="createTable()">
+        <input style="display: none;" type="button" id="submitButton" value="Create Table" onclick="createTable()">
+        <input type="button" id="saveButton" value="Validate/Save Table">
         </form>
 
     </fieldset>
@@ -67,6 +68,7 @@ updated by Roberto Cruz on 10/30/22
     </div>
 
     <div id="tabs">
+        <p id="tablesMsg"></p>
         <ul>
             <li><a href="#fragment-ex"><span>Example</span></a></li>
         </ul>

@@ -80,10 +80,20 @@ function checkArgs(r1, r2, c1, c2) {
         return false;
     }
 
-    // cannot create a reverse table
+    // switches params if starting number is greater than the end
     if (r1 > r2 || c1 > c2) {
         // message += "A starting number can't be greater than the ending number.";
         // document.getElementById("error").innerHTML = message + "</p>";
+        // var tempr1 = r1;
+        // var tempc1 = c1;
+
+        // r1 = r2;
+        // r2 = tempr1;
+
+        // c1 = c2;
+        // c2 = tempc1;
+        // return true;
+
         return false;
     }
 
