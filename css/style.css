@@ -25,7 +25,7 @@ h1 {
 fieldset {
     margin: 8px;
     max-width: fit-content;
-    border: 2px solid white;
+    /* border: 2px solid white; */
     border-radius: 4px;
     
     text-align: center;
@@ -104,8 +104,8 @@ input[type=submit]:hover {
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 1.15em;
     
-    border: 1px solid;
-    padding: 10px;
+    /* border: 1px solid; */
+    padding: 5px;
     text-align: center;
     background-color: #0000001e;
     color:white;
@@ -114,8 +114,8 @@ input[type=submit]:hover {
 /* Row and column header highlighted */
 
 #multTab table, #tabs {
-    border: 2px solid white;
-    border-radius: 4px;
+    /* border: 2px solid white; */
+    /* border-radius: 4px; */
 }
 
 #multTab th, #tabs th, #fragment-ex th {
@@ -158,13 +158,17 @@ input.error {
 }
 
 .tabs-buttons {
-    float: right;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 18px;
     color: white;
     text-align: center;
+    padding: 10px;  
+}
+
+#tableHeader h2 {
+    padding-top: 10px;
+    margin: 0;
+    display: inline-block;
 }
 
 /* Perfect squares code in JS file */
-
-

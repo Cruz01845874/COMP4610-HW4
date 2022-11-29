@@ -714,7 +714,7 @@ $.validator.addMethod( "greaterThanEqual", function( value, element, param ) {
         } );
     }
 
-    return value >= target.val();
+    return parseInt(value) >= parseInt(target.val());
 }, "Please enter a greater value." );
 
 /**
@@ -887,7 +887,7 @@ $.validator.addMethod( "lessThanEqual", function( value, element, param ) {
         } );
     }
 
-    return value <= target.val();
+    return parseInt(value) <= parseInt(target.val());
 }, "Please enter a lesser value." );
 
 $.validator.addMethod( "lettersonly", function( value, element ) {

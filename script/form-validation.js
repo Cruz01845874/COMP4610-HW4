@@ -1,30 +1,41 @@
-$().ready(function() {
+// File: form-validation.js
+// GUI Assignment: HW4a Using the jQuery Plugin
+// Copyright (c) 2022 by Roberto. All rights reserved. May be freely copied or
+// excerpted for educational purposes with credit to the author.
+// updated by Roberto Cruz on 11/28/22
+
+$(document).ready(function() {
     
+    // Multiplication table validation form
+    // Rules: 
+    //  Must be a negative or positive integer (no floating point numbers or strings)
+    //  Must be in the range [-50, 50]
+    //  A starting number cannot be greater than its end number (no reverse tables) and vice versa. 
     $('#mult').validate({
 
         rules: {
             row_begin: {
                 integer: true,
                 range: [-50, 50],
-                lessThan: '#row_end'
+                lessThanEqual: '#row_end'
             },
             
             row_end: {
                 integer: true,
                 range: [-50, 50],
-                greaterThan: '#row_begin'
+                greaterThanEqual: '#row_begin'
             },
 
             col_begin: {
                 integer: true,
                 range: [-50, 50],
-                lessThan: '#col_end'
+                lessThanEqual: '#col_end'
             },
 
             col_end: {
                 integer: true,
                 range: [-50, 50],
-                greaterThan: '#col_begin'
+                greaterThanEqual: '#col_begin'
             },
         },
 
@@ -33,33 +44,35 @@ $().ready(function() {
                 required: "Please enter a number.",
                 integer: "Please only enter whole numbers.",
                 range: "Numbers can only be between -50 and 50, inclusive.",
-                lessThan: "The starting row number must be less than the end."
+                lessThanEqual: "The starting row number must be less than the end."
             },
 
             row_end: {
                 required: "Please enter a number.",
                 integer: "Please only enter whole numbers.",
                 range: "Numbers can only be between -50 and 50, inclusive.",
-                greaterThan: "The ending row number must be greater than the start."
+                greaterThanEqual: "The ending row number must be greater than the start."
             },
 
             col_begin: {
                 required: "Please enter a number.",
                 integer: "Please only enter whole numbers.",
                 range: "Numbers can only be between -50 and 50, inclusive.",
-                lessThan: "The starting column number must be less than the end."
+                lessThanEqual: "The starting column number must be less than the end."
             },
 
             col_end: {
                 required: "Please enter a number.",
                 integer: "Please only enter whole numbers.",
                 range: "Numbers can only be between -50 and 50, inclusive.",
-                greaterThan: "The ending column number must be greater than the start."
+                greaterThanEqual: "The ending column number must be greater than the start."
             }
         }
     })
 
-    $('#saveButton').on('click', function () {
+    // Table is created only if form is valid.
+    // valid() method checks validity.
+    $('#submitButton').on('click', function () {
         $('#mult').valid();
     });
 })
