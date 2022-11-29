@@ -1,1 +1,1 @@
-# Interactive Multiplication Table w/ jQuery
+# jQuery UI Slider and Tab Widgets
