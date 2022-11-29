@@ -1,8 +1,8 @@
 // File: script.js
-// GUI Assignment: HW3 Creating an Interactive Dynamic Table
+// GUI Assignment: HW4 Using the jQuery Plugin/UI with Your Dynamic Table
 // Copyright (c) 2022 by Roberto. All rights reserved. May be freely copied or
 // excerpted for educational purposes with credit to the author.
-// updated by Roberto Cruz on 10/30/22
+// updated by Roberto Cruz on 11/29/22
 
 var row_begin, row_end, col_begin, col_end;
 

@@ -833,10 +833,10 @@ button.ui-button::-moz-focus-inner {
 .ui-tabs {
 	margin-top: 1.2em;
 	margin-left: 1.2em;
-	max-width: 550px;
-    max-height: 550px;
+	max-width: 730px;
+    max-height: 730px;
 	display: inline-block;
-	position: absolute;
+	position: relative;
 	overflow: auto;
 	/* position: relative prevents IE scroll bug (element with position: relative inside container with overflow: auto appear as "fixed") */
 	padding: .2em;

@@ -1,8 +1,8 @@
 // File: form-validation.js
-// GUI Assignment: HW4a Using the jQuery Plugin
+// GUI Assignment: HW4 Using the jQuery Plugin/UI with Your Dynamic Table
 // Copyright (c) 2022 by Roberto. All rights reserved. May be freely copied or
 // excerpted for educational purposes with credit to the author.
-// updated by Roberto Cruz on 11/28/22
+// updated by Roberto Cruz on 11/29/22
 
 $(document).ready(function() {
     
