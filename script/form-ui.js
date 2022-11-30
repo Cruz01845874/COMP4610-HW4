@@ -18,14 +18,19 @@ $(document).ready(function() {
         var ul = tabs.find('ul');
         var newTable = $('#multTab').html();
 
+        // do not add another table if max limit has been reached
+        if (count > maxTables) {
+            return;
+        }
+
         // tab name: [row_begin, row_end] x [col_begin, col_end]
         var tableName = "[" + $('#row_begin').val() + "," + $('#row_end').val()+ "] &#215; [" + $('#col_begin').val() + "," + $("#col_end").val() + "]";
 
         // checkbox at top right of each tab for multiple deleting
-        var checkBox = '<input type="checkbox" name="fragment-' + count + '">';
+        // var checkBox = '<input type="checkbox" id="boxFragment-' + count + '">';
 
         // add table fragment to the tab div
-        $('<li><a href="#fragment-' + count + '"><span>'+ tableName +'</span></a>' + checkBox + '</li>').appendTo(ul);
+        $('<li><a href="#fragment-' + count + '"><span>'+ tableName +'</span></a></li>').appendTo(ul);
         $('#frags').append('<div id="fragment-' + count + '">' + newTable + '</div>');
 
         count++;
@@ -144,23 +149,15 @@ $(document).ready(function() {
     $('#deleteButton').on('click', function() {
 
         var currentIndex = $('#tabs').tabs('option', 'active');
-        var tabItems = $('#tabs').find('li');
         console.log('delete button clicked');
 
         // deletes the active tab
         if ($('li').is(".ui-state-active")) {
             $(".ui-state-active").remove();
             $("#tabs").tabs("option", "active", currentIndex - 1);
-            totalTabs--;
+            console.log(count--);
+            console.log(totalTabs--);
             console.log("Tab removed");
         }
-
-        // deletes each tab that is checked
-        tabItems.each(function() {
-            if ($('input[type="checkbox"]').prop("checked") === true) {
-                $('li').remove();
-                console.log('is checked');
-            }
-        });
     })
 })

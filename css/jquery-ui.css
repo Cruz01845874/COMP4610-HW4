@@ -833,8 +833,8 @@ button.ui-button::-moz-focus-inner {
 .ui-tabs {
 	margin-top: 1.2em;
 	margin-left: 1.2em;
-	max-width: 730px;
-    max-height: 730px;
+	max-width: 750px;
+    max-height: 750px;
 	display: inline-block;
 	position: relative;
 	overflow: auto;

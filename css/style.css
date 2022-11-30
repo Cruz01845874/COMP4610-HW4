@@ -68,8 +68,8 @@ input[type=text]::placeholder {
     color:rgb(141, 140, 140);
 }
 
-/* Create Table Button */
-input[type=button] {
+/* Create Table Button and deleteButton */
+input[type=button], #deleteButton {
     background-color: #008bc2;
     
     padding: 14px 20px;
@@ -112,12 +112,6 @@ input[type=submit]:hover {
 }
 
 /* Row and column header highlighted */
-
-#multTab table, #tabs {
-    /* border: 2px solid white; */
-    /* border-radius: 4px; */
-}
-
 #multTab th, #tabs th, #fragment-ex th {
     background-color: #008bc2;
     position: sticky;
@@ -132,12 +126,14 @@ input[type=submit]:hover {
     left: 0;
 }
 
+/* Error message styling */
 .error {
     text-align: center;
     display: block;
     color: rgb(255, 74, 74);
 }
 
+/* Text field styling */
 input.error {
     border: 2px solid red;
 }
@@ -145,30 +141,6 @@ input.error {
 #tabs {
     background-color: rgb(58, 58, 58);
     color:white;
-}
-
-#tablesMsg {
-    display: none;
-}
-
-#tabs li .ui-icon-close {
-    float: left; 
-    margin: 0.4em 0.2em 0 0; 
-    cursor: pointer;
-}
-
-.tabs-buttons {
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 18px;
-    color: white;
-    text-align: center;
-    padding: 10px;  
-}
-
-#tableHeader h2 {
-    padding-top: 10px;
-    margin: 0;
-    display: inline-block;
 }
 
 /* Perfect squares code in JS file */

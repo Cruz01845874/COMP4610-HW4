@@ -60,8 +60,8 @@ updated by Roberto Cruz on 11/29/22
             <div id="c2_slider"></div><br>
 
             <!--Button does not create table directly. See JS file-->
-        <input style="display: none;" type="button" id="submitButton" value="Create Table" onclick="createTable()">
-        <input type="button" id="saveButton" value="Validate/Save Table">
+            <input style="display: none;" type="button" id="submitButton" value="Create Table" onclick="createTable()">
+            <input type="button" id="saveButton" value="Validate/Save Table">
         </form>
 
     </fieldset>
@@ -69,22 +69,19 @@ updated by Roberto Cruz on 11/29/22
         <!--Creates table when button clicked-->
     </div>
     
+    <!--Tabs-->
     <div id="tabs">
         <div id="tableHeader">
             <h2>Saved Tables</h2>
-            <input class="tabs-buttons" type="button" id="deleteButton" value="Delete Tabs">
+            <input class="tabs-buttons" type="button" id="deleteButton" value="Remove Tab">
+            <!-- <input class="tabs-buttons" type="button" id="deleteAllButton" value="Delete All"> -->
             <p class="maxTableLimit">You can only save up to 30 tables.</p>
         </div>
         <ul>
-            <!-- <li>
-                <a href="#fragment-ex">Example</a>
-                <input type="checkbox">
-            </li> -->
+            <!--Tabs are saved here as li-->
         </ul>
         <div id="frags">
-            <!-- <div id="fragment-ex">
-                <table><tbody><tr><th class="x">×</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th></tr><tr><th>1</th><td style="background-color: #0036ac;"><span>1</span></td><td>2</td><td>3</td><td>4</td><td>5</td></tr><tr><th>2</th><td>2</td><td style="background-color: #0036ac;"><span>4</span></td><td>6</td><td>8</td><td>10</td></tr><tr><th>3</th><td>3</td><td>6</td><td style="background-color: #0036ac;"><span>9</span></td><td>12</td><td>15</td></tr><tr><th>4</th><td>4</td><td>8</td><td>12</td><td style="background-color: #0036ac;"><span>16</span></td><td>20</td></tr><tr><th>5</th><td>5</td><td>10</td><td>15</td><td>20</td><td style="background-color: #0036ac;"><span>25</span></td></tr></tbody></table>
-            </div> -->
+            <!--Content of tabs are saved as divs here-->
         </div>
     </div>
     
