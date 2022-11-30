@@ -42,7 +42,7 @@ $(document).ready(function() {
         $("#tabs").tabs("option", "active", count);
     }
 
-    // note: same for every slider and text input
+    // note: same for every slider and text input (row_end, col_begin, col_end, and their respective sliders)
     // slider allows for numbers in the range [-50, 50]
     // when strings are put in the text box, slider cannot move
     $('#r1_slider').slider({
@@ -158,6 +158,11 @@ $(document).ready(function() {
             console.log(count--);
             console.log(totalTabs--);
             console.log("Tab removed");
+        }
+
+        // if no more tabs exist, delete remaining content
+        if (count == 3 && totalTabs == 2) {
+            $('#frags').empty();
         }
     })
 })
